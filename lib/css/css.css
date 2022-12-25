@@ -13,7 +13,6 @@ a {
 li {
     list-style: none;
 }
-
 .navbar-wrap {
     background-color: rgba(176, 224, 230, 0.13);
 }
@@ -25,7 +24,6 @@ li {
     width: 100%;
     max-width: 1200px;
     margin-inline: auto;
-    
 }
 .logo {
     font-size: 16px;
@@ -57,17 +55,6 @@ li {
 input[type=checkbox] {
     display: none;
 }
-/*
-.hamburger {
-    display: none;
-    font-size: 30px;
-    user-select: none;
-    border: 1px solid rgb(100, 100, 100);
-    border-radius: 6px;
-    padding: 0 6px;
-    color: rgb(46, 46, 46);
-}
-*/
 .menu button {
     padding: 9px;
     border: 1px solid #048cfc;
@@ -94,9 +81,10 @@ input[type=checkbox] {
     .logo {
         margin-left: 0px;
     }
+    .navbar {
+        background-color: #f2faff;
+    }
     .menu button {
-        padding: 7px;
-        margin-left: 30px;
         font-size: 14px;
         font-weight: 600;
     }
@@ -114,15 +102,12 @@ input[type=checkbox] {
         right: 0;
         left: 0;
         text-align: left;
-        padding: 16px 0;
+        /* padding:  0; */
         z-index: 1000;
-
     }
     .nav-links .menu-icon {
         cursor: pointer;
         display: inline-block;
-        
-        padding: 28px 0px;
         position: relative;
         user-select: none;
         padding: 55px 20px;
@@ -134,7 +119,6 @@ input[type=checkbox] {
         position: relative;
         transition: .2s ease-out;
         width: 1.5rem;
-        
     }
     .nav-links .menu-icon .nav-icon:before,
     .nav-links .menu-icon .nav-icon:after {
@@ -156,7 +140,9 @@ input[type=checkbox] {
         display: none;
     }
     .nav-links .menu-btn:checked~.menu {
-        max-height: 240px;
+        height: 100%;
+        overflow: hidden;
+        /*position: fixed;*/
     }
     .nav-links .menu-btn:checked~.menu-icon .nav-icon {
         background: transparent;
@@ -172,32 +158,24 @@ input[type=checkbox] {
         top: 0;
     }
     .menu li {
-        padding: 10px 0;
-        margin: 22px 40px;
+        box-sizing: border-box;
+        margin: 35px 35px 0;
         font-size: 20px;
-        font-weight: 100;
+        font-weight: 400;
     }
     .menu .nav-home {
         font-size: 22px;
-        font-weight: 400;
+        font-weight: 500;
     }
     .menu a .nav-btn2 {
         padding: 12px 20px;
         display: block;
         margin: 30px auto;
     }
+    .arrow-down {
+        padding-top: 4px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
 .intro-header {
     width: 100%;
     text-align: center;
@@ -268,46 +246,43 @@ input[type=checkbox] {
     font-weight: 600;
     background-color: #048cfc;
     color: #fff;
+    cursor: pointer;
 }
 .intro-message .intro-btn:hover {
     background-color: #048cfcb6;
 }
 @media (max-width: 480px) {
-    .intro-message {
-       margin: 0 4%;
-   }
    .intro-message h3 {
        font-size: 20px;
+        margin: 0 8%;
+   }
+   .intro-message h3::before {
+       width: 60px;
+       height: 1px;;
+   }
+   .intro-message h3::after {
+       width: 60px;
+       height: 1px;
    }
    .intro-message .big-text {
-       font-size: 40px;
+       font-size: 32px;
+       font-weight: 500;
    }
     .intro-message p {
         font-size: 16px;
-        padding: 15px 0;
+        margin:  0 20px;
+        padding: 12px;
+        font-size: 16px;
+        line-height: 35px;
+        font-family: Medium;
     }
     .intro-message .intro-btn {
-        padding: 14px;
+        padding: 12px;
         border: none;
         border-radius: 10px;
-        font-size: 15px;
-    }
-    .intro-message .big-text {
-        font-size: 32px;
+        font-size: 14px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 .passports {
     display: block;
     text-align: center;
@@ -350,27 +325,27 @@ input[type=checkbox] {
     font-size: 20px;
     color: #1a202c;
 }
-@media (max-width: 629px) {
+@media (max-width: 480px) {
     .passports {
-        padding: 24px 0 40px;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
     .passports h3 {
         font-size: 20px;
     }
+    .passports h3::before {
+        width: 60px;
+        height: 1px;
+    }
+    .passports h3::after {
+        width: 60px;
+        height: 1px;
+    }
     .passports .passport-text-content {
-        padding: 30px;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
         font-size: 16px;
     }
-}
-.features-container {
-    margin: auto;
-    width: 1170px;
-    background-color: rgb(255, 255, 255);
-    padding: 0 0 40px;
-}
-.features-wrapper {
-    display: flex;
-    gap: 30px; 
 }
 .features h3 {
     color: #048cfc;
@@ -378,7 +353,6 @@ input[type=checkbox] {
     padding: 64px 0;
     text-align: center;
     margin: 1% auto;
-
     max-width: 550px;
     position: relative;
     box-shadow: 0 -5px 5px -5px #048cfc28;
@@ -405,75 +379,115 @@ input[type=checkbox] {
     top: 50%;
     z-index: -1;
 }
+@media (max-width: 480px) {
+    .features h3 {
+        padding: 64px 0;
+        margin: auto;
+        width: 70vw;
+        font-size: 20px;
+    }
+    .features h3::before {
+        width: 60px;
+        height: 1px;
+    }
+    .features h3::after {
+        width: 60px;
+        height: 1px;
+    }
+}
+.features-wrapper {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    padding-bottom: 5rem;
+    gap: 32px;
+    border-color: rgb(243, 249, 255);
+    box-sizing: border-box;
+}
 .features-card-content {
-    background-color: #f7f2fb;
-    padding: 50px 32px 0;
-    margin: 0 0 32px;
+    background-color: rgb(247, 242, 251);
     width: 560px;
     height: 578px;
-}
-.card-line{
-    width: 4vw;
-    height: 3px;
-    background-color: #05478a;
-}
-.features-card-content h2 {
-    color: #05478a;
-    font-size: 32px;
-    padding: 30px 0;
+    padding: 80px 32px 0px;
+    margin-bottom: 32px;
+    position: relative;
 }
 .features-card-context {
-    background-color: #f2faff;
-    padding: 50px 32px 0;
-    margin: 0 0 32px;
     width: 560px;
     height: 612px;
+    background: rgb(242, 250, 255);
+    padding: 80px 32px 0px;
+    margin-bottom: 32px;
+    position: relative;
 }
-.features-card-context h2 {
-    color: #05478a;
+.card-title {
     font-size: 32px;
-    padding: 30px 0;
+    color: #05478a;
+    position: relative;
+    font-family: Bold;
+    margin-top: 32px;
 }
 .features-card-text {
-    color: #616060;
     font-size: 20px;
-    line-height: 30px;
-}
-.link-img-flex {
-    display: flex;
+    color: rgb(97, 96, 96);
+    margin-top: 1.25rem;
+    margin-bottom: 32px;
 }
 .learn {
     text-transform: uppercase;
-    text-decoration: underline;
     color: #048cfc;
     cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 32px 0 0;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 700;
 }
-@media (max-width: 480px ) {
-    .features-container {
-        box-sizing: border-box;
-    }
+.features-sticker {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.card-line {
+    width: 5rem;
+    height: 2px;
+    background-color: #05478a;
+}
+@media (max-width: 480px) {
     .features-wrapper {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-left: 0;
-        width: 50px;
+        padding-bottom: 0;
     }
-
+    .features-card-content {
+        width: 100%;
+        padding: 80px 32px 0px;
+        margin-bottom: 32px;
+        position: relative;
+        height: 632px;
+    }
+    .features-card-context {
+        width: 100%;
+        padding: 80px 32px 0px;
+        margin-bottom: 32px;
+        position: relative;
+        height: 660px;
+    }
+    .card-line {
+        width: 4rem;
+    }
+    .card-title {
+        font-size: 28px;
+    }
+    .features-card-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
 .chackra-text {
     display: block;
     text-align: center;
@@ -525,6 +539,64 @@ input[type=checkbox] {
     margin: 0 148px;
     color: #1a202c;
 }
+@media (max-width: 480px) {
+    .chackra-text h3 {
+        margin: auto;
+        margin-left: 3em;
+        margin-right: 3em;
+        font-size: 20px;
+    }
+    .chackra-text h3::before {
+        width: 60px;
+        height: 1px;
+    }
+    .chackra-text h3::after {
+        width: 60px;
+        height: 1px;
+    }
+    .chackra-text-content h2 {
+        font-size: 28px;
+        padding: 0 28px 24px 28px;
+        line-height: 40px;
+    }
+    .chackra-text-content p {
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0 22px 0 22px;
+        margin-inline: auto;
+        width: 86%;
+        line-height: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .chackra-features-cover {
     margin: 48px 120px 0;
     gap: 48px;
