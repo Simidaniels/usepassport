@@ -758,37 +758,6 @@ input[type=checkbox] {
         font-size: 14px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .question-header {
     display: block;
     text-align: center;
@@ -867,39 +836,6 @@ input[type=checkbox] {
         width: 80%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .questions-context {
     background-color: #f2faff;
     width: 100%;
@@ -1081,67 +1017,43 @@ input[type=checkbox] {
         display: none;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer-wrapper {
     background-color: #05478a;
     width: 100%;
     padding-top: 5rem;
     padding-bottom: 5rem;
-
 }
 .footer-container {
     display: flex;
-    -webkit-box-pack: justify;
+    flex-direction: row;
     justify-content: space-between;
-    padding-inline: 20px;
-    height: 100%;
+    margin-inline: auto;
     width: 80%;
     max-width: 1200px;
-    margin-inline: auto;  
-    box-sizing: border-box;
+    height: 100%;
+    gap: 0px;
+    padding-inline: 0px;
 }
 .footer-logo {
     color: #ffffff;
-    font-weight: bold;
-    
+    font-weight: bold; 
+    width: 35%;
 }
 .footer-cols-container {
+    width: 25%;
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
-
-    padding-left: 24vw;
-    
-    gap: 10rem;
 }
 .footer-cols-text {
-
     font-size: 14px;
     margin: 12px 0 0;
 }
 .footer-cols-wrapper {
     color: #ffffff;
-    
-    
 }
 .footer-reserved {
     color: #e2e8f0;
-    line-height: 20px;
     font-weight: 500;
     font-size: 12px;
     opacity: 0.6;
@@ -1175,7 +1087,15 @@ input[type=checkbox] {
     color: rgb(255, 255, 255);
     font-size: 18px;
 }
+.footer-svg:hover {
+    background-color: #048cfca2;
+}
 @media (max-width: 480px) {
+    .footer-wrapper {
+        width: 100%;
+        padding-top: 5rem;
+        padding-bottom: 4rem;
+    }
     .footer-container {
         display: flex;
         -webkit-box-pack: justify;
@@ -1183,11 +1103,28 @@ input[type=checkbox] {
         margin-inline: auto;
         width: 80%;
         max-width: 1200px;
-        color: #fff;
+        color: #ffffff;
         height: 100%;
         flex-direction: column;
         gap: 3rem;
         padding-inline-start: 2rem;
         padding-inline-end: 2rem;
+    }
+    .footer-cols-container {
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .footer-svg-reserved-wrapper {
+        display: flex;
+        align-items: flex-start;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 48px 0 0;
+    }
+    .footer-svg {
+        margin: 0;
     }
 }
